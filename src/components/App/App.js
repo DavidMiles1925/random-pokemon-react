@@ -51,7 +51,7 @@ function App() {
 
     setEntryData(mockServer[randomNumber]);
   }
-
+  //
   useEffect(() => {
     getData();
   }, []);
