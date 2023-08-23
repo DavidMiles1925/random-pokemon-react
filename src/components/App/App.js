@@ -62,6 +62,10 @@ function App() {
     return medString;
   }
 
+  function newGetTypeData(type) {
+    const singleItemList = typeServer.filter((item) => item.name === type);
+  }
+
   function getTypeData(randomNumber) {
     const singleItemList = typeServer.filter(
       (filter_item) =>
@@ -81,7 +85,7 @@ function App() {
         (filter_item) =>
           firstToUpper(filter_item.name) === mockServer[randomNumber].type_1
       );
-      const typeObjectTwo = singleItemList[0];
+      const typeObjectTwo = singleItemListTwo[0];
       console.log(typeObjectTwo.double_damage_from);
 
       setDoubleDamageToTwo(typeObjectTwo.double_damage_to);
