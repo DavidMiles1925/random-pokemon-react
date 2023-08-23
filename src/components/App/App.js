@@ -25,6 +25,13 @@ function App() {
   const [noDamageTo, setNoDamageTo] = useState([]);
   const [doubleDamageFrom, setDoubleDamageFrom] = useState([]);
 
+  const [doubleDamageToTwo, setDoubleDamageToTwo] = useState([]);
+  const [halfDamageFromTwo, setHalfDamageFromTwo] = useState([]);
+  const [noDamageFromTwo, setNoDamageFromTwo] = useState([]);
+  const [halfDamageToTwo, setHalfDamageToTwo] = useState([]);
+  const [noDamageToTwo, setNoDamageToTwo] = useState([]);
+  const [doubleDamageFromTwo, setDoubleDamageFromTwo] = useState([]);
+
   function firstToUpper(word) {
     return word.charAt(0).toUpperCase() + word.slice(1);
   }
@@ -45,9 +52,9 @@ function App() {
     typeServer.map((item) => {
       if (item.name === type) {
         position = counter;
+        return counter;
       }
       counter = counter + 1;
-      return 0;
     });
 
     const medString = `/types/${firstToLower(typeServer[position].name)}-m.png`;
@@ -69,6 +76,21 @@ function App() {
     setHalfDamageTo(typeObject.half_damage_to);
     setNoDamageTo(typeObject.no_damage_to);
     setDoubleDamageFrom(typeObject.double_damage_from);
+    if (mockServer[randomNumber].type_1) {
+      const singleItemListTwo = typeServer.filter(
+        (filter_item) =>
+          firstToUpper(filter_item.name) === mockServer[randomNumber].type_1
+      );
+      const typeObjectTwo = singleItemList[0];
+      console.log(typeObjectTwo.double_damage_from);
+
+      setDoubleDamageToTwo(typeObjectTwo.double_damage_to);
+      setHalfDamageFromTwo(typeObjectTwo.half_damage_from);
+      setNoDamageFromTwo(typeObjectTwo.no_damage_from);
+      setHalfDamageToTwo(typeObjectTwo.half_damage_to);
+      setNoDamageToTwo(typeObjectTwo.no_damage_to);
+      setDoubleDamageFromTwo(typeObjectTwo.double_damage_from);
+    }
   }
 
   function getData() {
@@ -115,6 +137,12 @@ function App() {
         halfDamageTo={halfDamageTo}
         noDamageTo={noDamageTo}
         doubleDamageFrom={doubleDamageFrom}
+        doubleDamageToTwo={doubleDamageToTwo}
+        halfDamageFromTwo={halfDamageFromTwo}
+        noDamageFromTwo={noDamageFromTwo}
+        halfDamageToTwo={halfDamageToTwo}
+        noDamageToTwo={noDamageToTwo}
+        doubleDamageFromTwo={doubleDamageFromTwo}
       />
     </div>
   );

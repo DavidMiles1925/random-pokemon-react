@@ -15,6 +15,12 @@ function RandomPokemonGenerator({
   halfDamageTo,
   noDamageTo,
   doubleDamageFrom,
+  doubleDamageToTwo,
+  halfDamageFromTwo,
+  noDamageFromTwo,
+  halfDamageToTwo,
+  noDamageToTwo,
+  doubleDamageFromTwo,
 }) {
   return (
     <div className='page-wrapper'>
@@ -60,8 +66,8 @@ function RandomPokemonGenerator({
         </div>
       </div>
       <RandomTypeCard
-        type_0={entryData.type_0}
-        typeMedallionOne={typeMedallionOne}
+        type={entryData.type_0}
+        typeMedallion={typeMedallionOne}
         doubleDamageTo={doubleDamageTo}
         halfDamageFrom={halfDamageFrom}
         noDamageFrom={noDamageFrom}
@@ -70,6 +76,21 @@ function RandomPokemonGenerator({
         doubleDamageFrom={doubleDamageFrom}
         getMedallion={getMedallion}
       />
+      {entryData.type_1 ? (
+        <RandomTypeCard
+          type={entryData.type_1}
+          typeMedallion={typeMedallionTwo}
+          doubleDamageTo={doubleDamageToTwo}
+          halfDamageFrom={halfDamageFromTwo}
+          noDamageFrom={noDamageFromTwo}
+          halfDamageTo={halfDamageToTwo}
+          noDamageTo={noDamageToTwo}
+          doubleDamageFrom={doubleDamageFromTwo}
+          getMedallion={getMedallion}
+        />
+      ) : (
+        ""
+      )}
     </div>
   );
 }
