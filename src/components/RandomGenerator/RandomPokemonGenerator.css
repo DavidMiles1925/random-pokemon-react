@@ -1,0 +1,69 @@
+.rand {
+  background-color: yellow;
+  border: solid 4px red;
+  border-radius: 20px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(164, 11, 11);
+}
+
+.rand__button {
+  margin: 12px;
+  border-radius: 20px;
+  border: 0px;
+  padding: 8px;
+  background-color: red;
+  font-family: "PocketMonk";
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(240, 240, 2);
+}
+.rand__button:hover {
+  cursor: pointer;
+}
+
+.rand__heading {
+  margin: 0;
+}
+
+.rand__sprite {
+  margin: 0;
+  width: 300px;
+}
+
+.rand__info-wrapper {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.rand__attribute-title {
+  margin: 0;
+  font-weight: bold;
+}
+
+.rand__attribute {
+  font-size: 20px;
+  text-align: left;
+  margin: 0 0 8px 0;
+  max-width: 300px;
+  font-weight: normal;
+}
+
+.rand__attribute_type_type {
+  font-size: 32px;
+  margin: 0;
+}
+
+.rand__type-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.rand__type-emblem {
+  width: 60px;
+}
