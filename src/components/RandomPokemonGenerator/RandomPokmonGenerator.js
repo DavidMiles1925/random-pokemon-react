@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import RandomTypeCard from "../../RandomTypeCard/RandomTypeCard";
+import RandomTypeCard from "../RandomTypeCard/RandomTypeCard";
 import "./RandomPokemonGenerator.css";
 
 function RandomPokemonGenerator({
@@ -8,6 +8,7 @@ function RandomPokemonGenerator({
   typeMedallionOne,
   typeMedallionTwo,
   getData,
+  getMedallion,
   doubleDamageTo,
   halfDamageFrom,
   noDamageFrom,
@@ -60,12 +61,14 @@ function RandomPokemonGenerator({
       </div>
       <RandomTypeCard
         type_0={entryData.type_0}
+        typeMedallionOne={typeMedallionOne}
         doubleDamageTo={doubleDamageTo}
         halfDamageFrom={halfDamageFrom}
         noDamageFrom={noDamageFrom}
         halfDamageTo={halfDamageTo}
         noDamageTo={noDamageTo}
         doubleDamageFrom={doubleDamageFrom}
+        getMedallion={getMedallion}
       />
     </div>
   );

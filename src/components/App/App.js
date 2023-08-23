@@ -38,6 +38,23 @@ function App() {
     return randomNumber;
   }
 
+  function getMedallion(type) {
+    let counter = 0;
+    let position = 0;
+
+    typeServer.map((item) => {
+      if (item.name === type) {
+        position = counter;
+      }
+      counter = counter + 1;
+      return 0;
+    });
+
+    const medString = `/types/${firstToLower(typeServer[position].name)}-m.png`;
+    console.log(medString);
+    return medString;
+  }
+
   function getTypeData(randomNumber) {
     const singleItemList = typeServer.filter(
       (filter_item) =>
@@ -56,14 +73,16 @@ function App() {
 
   function getData() {
     const randomNumber = generateRandom();
-
-    console.log(mockServer[randomNumber]);
+    setEntryData(mockServer[randomNumber]);
 
     const stringToUse = "/official-artwork/" + (randomNumber + 1) + ".png";
+    setImageNumber(stringToUse);
 
     const typeString_1 = `/types/${firstToLower(
       mockServer[randomNumber].type_0
     )}-m.png`;
+    setTypeMedallionOne(typeString_1);
+
     if (mockServer[randomNumber].type_1) {
       const typeString_2 = `/types/${firstToLower(
         mockServer[randomNumber].type_1
@@ -72,12 +91,6 @@ function App() {
     } else {
       setTypeMedallionTwo("");
     }
-
-    console.log(mockServer[randomNumber].type_0);
-    setImageNumber(stringToUse);
-    setTypeMedallionOne(typeString_1);
-
-    setEntryData(mockServer[randomNumber]);
 
     getTypeData(randomNumber);
   }
@@ -95,6 +108,7 @@ function App() {
         typeMedallionOne={typeMedallionOne}
         typeMedallionTwo={typeMedallionTwo}
         getData={getData}
+        getMedallion={getMedallion}
         doubleDamageTo={doubleDamageTo}
         halfDamageFrom={halfDamageFrom}
         noDamageFrom={noDamageFrom}
@@ -107,6 +121,3 @@ function App() {
 }
 
 export default App;
-/*
-
-*/

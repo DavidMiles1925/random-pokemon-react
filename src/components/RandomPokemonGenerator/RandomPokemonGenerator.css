@@ -28,6 +28,10 @@
   margin: 0;
 }
 
+.rand__heading_type_underline {
+  text-decoration-line: underline;
+}
+
 .rand__sprite {
   margin: 0;
   width: 300px;
@@ -44,6 +48,10 @@
 .rand__attribute-title {
   margin: 0;
   font-weight: bold;
+}
+
+.rand__attribute-title_type_underline {
+  text-decoration-line: underline;
 }
 
 .rand__attribute {
@@ -66,4 +74,11 @@
 
 .rand__type-emblem {
   width: 60px;
+}
+.rand__type-emblem_type_large {
+  width: 150px;
+}
+
+.rand__type-emblem_type_small {
+  width: 40px;
 }
