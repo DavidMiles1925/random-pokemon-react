@@ -40,7 +40,17 @@ Good News! This project is in active development. This will add user authenticat
 
 Note (mostly to myself): Code is in need of refactoring. After completely breaking the repo and reverting to a previous version, I was haveing difficulty passing data between components for some reason. I used a quick fix by duplicating code in App.js instead of writing a new `getTypeData()` function, but this all needs to be encapsulated and duplicate code eliminated.
 
----
+### Verion History
+
+Version 1.1:
+
+- Added responsive design
+
+Version 1.2:
+
+- Fixed bug causing white space at the bottom of large screens
+
+###########################################
 
 **Thanks to:**
 

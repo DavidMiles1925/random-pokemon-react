@@ -2,9 +2,17 @@ h1 {
   margin: 0;
 }
 
+html,
+body,
+#root {
+  height: 100vh;
+}
+
 .App {
+  background-color: black;
   text-align: center;
   font-family: "PocketMonk";
+  height: 100%;
 }
 
 .page-wrapper {
