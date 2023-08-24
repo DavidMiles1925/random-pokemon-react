@@ -1,5 +1,9 @@
 # Random Pokemon
 
+## Link to App: [GitHub Page](https://davidmiles1925.github.io/random-pokemon-react/)
+
+Current Version Deployed: Version 1.0.0
+
 ## Project Description
 
 This project was created in effort to teach my family how to play pokemon. My son and I have played for years, but at the time of writing this, my wife and daughter have only started playing recenly. They have reached a point where it would be advantageous to be able to recall each pokemon from memory, so I developed this tool to aid them in that endeavor. It will grow over time.
@@ -10,7 +14,7 @@ This project was created in effort to teach my family how to play pokemon. My so
 
 This page returns a single random pokemon and its accociated data.
 
-<img src="./src/images/readme/app_draft.png" alt="draft" width="200"/>
+<img src="./src/images/readme/screenshot_v1.png" alt="draft" width="200"/>
 
 #### Pokeomon of the Day
 
