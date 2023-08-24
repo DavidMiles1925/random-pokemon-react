@@ -2,8 +2,8 @@
 
 ## Link to App: [GitHub Page](https://davidmiles1925.github.io/random-pokemon-react/)
 
-Current Version Deployed: Version 1.1
-In Development: Version 1.2
+Current Version Deployed: Version 1.2
+In Development: Version 2.0
 
 ## Project Description
 
@@ -39,6 +39,15 @@ Good News! This project is in active development. This will add user authenticat
 **Under Construction**
 
 Note (mostly to myself): Code is in need of refactoring. After completely breaking the repo and reverting to a previous version, I was haveing difficulty passing data between components for some reason. I used a quick fix by duplicating code in App.js instead of writing a new `getTypeData()` function, but this all needs to be encapsulated and duplicate code eliminated.
+
+## Future Development
+
+Version 2:
+
+- Add search function
+- Move "New Pokemon!" button above cards.
+- Update `Header` component
+- Add `Footer` component
 
 ### Verion History
 
