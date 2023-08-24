@@ -63,7 +63,16 @@ function App() {
   }
 
   function newGetTypeData(type) {
+    console.log(`type: ${type}`);
     const singleItemList = typeServer.filter((item) => item.name === type);
+
+    let typeObject = {};
+    if (singleItemList[0]) {
+      typeObject = singleItemList[0];
+    } else {
+      console.log("nothing in singleItemList");
+    }
+    return typeObject;
   }
 
   function getTypeData(randomNumber) {
@@ -135,6 +144,7 @@ function App() {
         typeMedallionTwo={typeMedallionTwo}
         getData={getData}
         getMedallion={getMedallion}
+        newGetTypeData={newGetTypeData}
         doubleDamageTo={doubleDamageTo}
         halfDamageFrom={halfDamageFrom}
         noDamageFrom={noDamageFrom}
