@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Random-Pokemon-UI/static/css/main.06f605ff.css",
-    "main.js": "/Random-Pokemon-UI/static/js/main.28eacdc5.js",
-    "static/media/PocketMonk.ttf": "/Random-Pokemon-UI/static/media/PocketMonk.09d09837f1b6dec50403.ttf",
-    "index.html": "/Random-Pokemon-UI/index.html",
-    "main.06f605ff.css.map": "/Random-Pokemon-UI/static/css/main.06f605ff.css.map",
-    "main.28eacdc5.js.map": "/Random-Pokemon-UI/static/js/main.28eacdc5.js.map"
+    "main.css": "/random-pokemon-react/static/css/main.ffd100df.css",
+    "main.js": "/random-pokemon-react/static/js/main.42236d57.js",
+    "static/media/PocketMonk.ttf": "/random-pokemon-react/static/media/PocketMonk.09d09837f1b6dec50403.ttf",
+    "index.html": "/random-pokemon-react/index.html",
+    "main.ffd100df.css.map": "/random-pokemon-react/static/css/main.ffd100df.css.map",
+    "main.42236d57.js.map": "/random-pokemon-react/static/js/main.42236d57.js.map"
   },
   "entrypoints": [
-    "static/css/main.06f605ff.css",
-    "static/js/main.28eacdc5.js"
+    "static/css/main.ffd100df.css",
+    "static/js/main.42236d57.js"
   ]
 }
