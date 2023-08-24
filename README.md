@@ -2,7 +2,8 @@
 
 ## Link to App: [GitHub Page](https://davidmiles1925.github.io/random-pokemon-react/)
 
-Current Version Deployed: Version 1.0.0
+Current Version Deployed: Version 1.1
+In Development: Version 1.2
 
 ## Project Description
 
