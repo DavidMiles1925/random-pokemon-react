@@ -58,12 +58,10 @@ function App() {
     });
 
     const medString = `/types/${firstToLower(typeServer[position].name)}-m.png`;
-    console.log(medString);
     return medString;
   }
 
   function newGetTypeData(type) {
-    console.log(`type: ${type}`);
     const singleItemList = typeServer.filter((item) => item.name === type);
 
     let typeObject = {};
@@ -81,7 +79,6 @@ function App() {
         firstToUpper(filter_item.name) === mockServer[randomNumber].type_0
     );
     const typeObject = singleItemList[0];
-    console.log(typeObject.double_damage_from);
 
     setDoubleDamageTo(typeObject.double_damage_to);
     setHalfDamageFrom(typeObject.half_damage_from);
@@ -95,7 +92,6 @@ function App() {
           firstToUpper(filter_item.name) === mockServer[randomNumber].type_1
       );
       const typeObjectTwo = singleItemListTwo[0];
-      console.log(typeObjectTwo.double_damage_from);
 
       setDoubleDamageToTwo(typeObjectTwo.double_damage_to);
       setHalfDamageFromTwo(typeObjectTwo.half_damage_from);

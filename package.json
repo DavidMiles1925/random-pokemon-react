@@ -1,8 +1,8 @@
 {
-  "name": "random-pokemon-ui",
+  "name": "random-pokemon",
   "version": "0.3.0",
   "private": true,
-  "homepage": "https://davidmiles1925.github.io/Random-Pokemon-UI",
+  "homepage": "https://davidmiles1925.github.io/random-pokemon-react",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
