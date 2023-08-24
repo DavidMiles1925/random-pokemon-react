@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import RandomTypeCard from "../RandomTypeCard/RandomTypeCard";
 import "./RandomPokemonGenerator.css";
 
 function RandomPokemonGenerator({
@@ -7,6 +8,20 @@ function RandomPokemonGenerator({
   typeMedallionOne,
   typeMedallionTwo,
   getData,
+  getMedallion,
+  newGetTypeData,
+  doubleDamageTo,
+  halfDamageFrom,
+  noDamageFrom,
+  halfDamageTo,
+  noDamageTo,
+  doubleDamageFrom,
+  doubleDamageToTwo,
+  halfDamageFromTwo,
+  noDamageFromTwo,
+  halfDamageToTwo,
+  noDamageToTwo,
+  doubleDamageFromTwo,
 }) {
   return (
     <div className='page-wrapper'>
@@ -51,9 +66,36 @@ function RandomPokemonGenerator({
           )}
         </div>
       </div>
+      <RandomTypeCard
+        type={entryData.type_0}
+        typeMedallion={typeMedallionOne}
+        doubleDamageTo={doubleDamageTo}
+        halfDamageFrom={halfDamageFrom}
+        noDamageFrom={noDamageFrom}
+        halfDamageTo={halfDamageTo}
+        noDamageTo={noDamageTo}
+        doubleDamageFrom={doubleDamageFrom}
+        getMedallion={getMedallion}
+        newGetTypeData={newGetTypeData}
+      />
+      {entryData.type_1 ? (
+        <RandomTypeCard
+          type={entryData.type_1}
+          typeMedallion={typeMedallionTwo}
+          doubleDamageTo={doubleDamageToTwo}
+          halfDamageFrom={halfDamageFromTwo}
+          noDamageFrom={noDamageFromTwo}
+          halfDamageTo={halfDamageToTwo}
+          noDamageTo={noDamageToTwo}
+          doubleDamageFrom={doubleDamageFromTwo}
+          getMedallion={getMedallion}
+          newGetTypeData={newGetTypeData}
+        />
+      ) : (
+        ""
+      )}
     </div>
   );
 }
 
 export default RandomPokemonGenerator;
-// <TypeCard type_0={entryData.type_0} />

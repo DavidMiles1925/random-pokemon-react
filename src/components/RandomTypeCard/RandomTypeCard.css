@@ -1,0 +1,34 @@
+.typecard {
+  background-color: yellow;
+  border: solid 4px red;
+  border-radius: 20px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(164, 11, 11);
+}
+
+.typecard__section-wrapper {
+  border: 2px red solid;
+  border-radius: 20px;
+}
+
+.typecard__type-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+}
+
+.typecard__item-wrapper {
+  width: 80px;
+  height: 40px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.typecard__type-item {
+  margin: 0;
+}
