@@ -40,7 +40,7 @@ function App() {
     return word.charAt(0).toLowerCase() + word.slice(1);
   }
 
-  function generateRandom() {
+  function generateRandomNumber() {
     const randomNumber = Math.floor(Math.random() * 1008) + 1;
     return randomNumber;
   }
@@ -103,7 +103,7 @@ function App() {
   }
 
   function getData() {
-    const randomNumber = generateRandom();
+    const randomNumber = generateRandomNumber();
     setEntryData(mockServer[randomNumber]);
 
     const stringToUse = "/official-artwork/" + (randomNumber + 1) + ".png";
@@ -125,6 +125,8 @@ function App() {
 
     getTypeData(randomNumber);
   }
+
+  function searchForPokemon(searchTerm) {}
   //
   useEffect(() => {
     getData();
