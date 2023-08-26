@@ -42,26 +42,32 @@ Note (mostly to myself): Code is in need of refactoring. After completely breaki
 
 ### Future Development
 
-Version 2:
+**Version 2:**
 
+- Pokemon of the day (Manual Update daily, API and automation coming in version 3.0.)
 - Add search function
 - Move "New Pokemon!" button above cards.
 - Update `Header` component
 - Add `Footer` component
 
+**Version Notes:**
+
+- Refactor
+  -- simplify: individual damage hooks to damage objects
+
 ### Verion History
 
-Version 1.1:
+**Version 1.1:**
 
 - Added responsive design
 
-Version 1.2:
+**Version 1.2:**
 
 - Fixed bug causing white space at the bottom of large screens
 
 ###########################################
 
-**Thanks to:**
+## Thanks To:
 
 [PokeAPI](https://pokeapi.co/), a complete, accurate, and easy to use API that supplied the raw data for this project.
 
