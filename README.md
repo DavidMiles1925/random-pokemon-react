@@ -50,10 +50,10 @@ Note (mostly to myself): Code is in need of refactoring. After completely breaki
 - Update `Header` component
 - Add `Footer` component
 
-**Version Notes:**
+Version Notes:
 
-- Refactor
-  -- simplify: individual damage hooks to damage objects
+- Refactor still needed, having A LOT of difficulty with damage object.
+- Switch routing used, in the future I will need to update react-router-dom to v6 and switch to <Routes>
 
 ### Verion History
 
