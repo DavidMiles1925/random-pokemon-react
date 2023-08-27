@@ -53,7 +53,11 @@ Note (mostly to myself): Code is in need of refactoring. After completely breaki
 Version Notes:
 
 - Refactor still needed, having A LOT of difficulty with damage object.
-- Switch routing used, in the future I will need to update react-router-dom to v6 and switch to <Routes>
+- Updated react-router-dom to version 6.15.0, reafactored code for changes:
+  -- Switch->Routes
+  -- Redirect->Navigate
+- Header Componet:
+  -- Added links for search and random generator
 
 ### Verion History
 
