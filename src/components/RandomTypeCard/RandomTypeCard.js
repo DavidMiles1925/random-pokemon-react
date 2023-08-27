@@ -11,14 +11,7 @@ function RandomTypeCard({
   noDamageTo,
   doubleDamageFrom,
   getMedallion,
-  newGetTypeData,
 }) {
-  const [newDoubleDamageTo, setNewDoubleDamageTo] = useState([]);
-
-  function getCardData() {
-    newGetTypeData();
-  }
-
   return (
     <div className='typecard'>
       <img

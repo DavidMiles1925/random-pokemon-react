@@ -1,16 +1,20 @@
 //React
 import { useEffect, useState } from "react";
+import { Route, Switch } from "react-router-dom";
+import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 
 // Styles
 import "../../fonts/fonts.css";
 import "./App.css";
 
+// Data
+import mockServer from "../../mockServer/mockServer";
+import typeServer from "../../mockServer/typeServer";
+
 // Components
 import Header from "../Header/Header";
 import RandomPokemonGenerator from "../RandomPokemonGenerator/RandomPokmonGenerator";
-
-import mockServer from "../../mockServer/mockServer";
-import typeServer from "../../mockServer/typeServer";
+import Main from "../Main/Main";
 
 function App() {
   const [entryData, setEntryData] = useState({});
@@ -59,18 +63,6 @@ function App() {
 
     const medString = `/types/${firstToLower(typeServer[position].name)}-m.png`;
     return medString;
-  }
-
-  function newGetTypeData(type) {
-    const singleItemList = typeServer.filter((item) => item.name === type);
-
-    let typeObject = {};
-    if (singleItemList[0]) {
-      typeObject = singleItemList[0];
-    } else {
-      console.log("nothing in singleItemList");
-    }
-    return typeObject;
   }
 
   function getTypeData(randomNumber) {
@@ -135,27 +127,36 @@ function App() {
   return (
     <div className='App'>
       <Header />
-      <RandomPokemonGenerator
-        entryData={entryData}
-        imageNumber={imageNumber}
-        typeMedallionOne={typeMedallionOne}
-        typeMedallionTwo={typeMedallionTwo}
-        getData={getData}
-        getMedallion={getMedallion}
-        newGetTypeData={newGetTypeData}
-        doubleDamageTo={doubleDamageTo}
-        halfDamageFrom={halfDamageFrom}
-        noDamageFrom={noDamageFrom}
-        halfDamageTo={halfDamageTo}
-        noDamageTo={noDamageTo}
-        doubleDamageFrom={doubleDamageFrom}
-        doubleDamageToTwo={doubleDamageToTwo}
-        halfDamageFromTwo={halfDamageFromTwo}
-        noDamageFromTwo={noDamageFromTwo}
-        halfDamageToTwo={halfDamageToTwo}
-        noDamageToTwo={noDamageToTwo}
-        doubleDamageFromTwo={doubleDamageFromTwo}
-      />
+      <Switch>
+        <Route path='/main'>
+          <Main></Main>
+        </Route>
+        <Route path='/random'>
+          <RandomPokemonGenerator
+            entryData={entryData}
+            imageNumber={imageNumber}
+            typeMedallionOne={typeMedallionOne}
+            typeMedallionTwo={typeMedallionTwo}
+            getData={getData}
+            getMedallion={getMedallion}
+            doubleDamageTo={doubleDamageTo}
+            halfDamageFrom={halfDamageFrom}
+            noDamageFrom={noDamageFrom}
+            halfDamageTo={halfDamageTo}
+            noDamageTo={noDamageTo}
+            doubleDamageFrom={doubleDamageFrom}
+            doubleDamageToTwo={doubleDamageToTwo}
+            halfDamageFromTwo={halfDamageFromTwo}
+            noDamageFromTwo={noDamageFromTwo}
+            halfDamageToTwo={halfDamageToTwo}
+            noDamageToTwo={noDamageToTwo}
+            doubleDamageFromTwo={doubleDamageFromTwo}
+          />
+        </Route>
+        <Route path='/'>
+          <Redirect to='/random' />
+        </Route>
+      </Switch>
     </div>
   );
 }

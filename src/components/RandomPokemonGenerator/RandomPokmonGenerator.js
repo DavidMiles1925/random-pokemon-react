@@ -9,7 +9,6 @@ function RandomPokemonGenerator({
   typeMedallionTwo,
   getData,
   getMedallion,
-  newGetTypeData,
   doubleDamageTo,
   halfDamageFrom,
   noDamageFrom,
@@ -76,7 +75,6 @@ function RandomPokemonGenerator({
         noDamageTo={noDamageTo}
         doubleDamageFrom={doubleDamageFrom}
         getMedallion={getMedallion}
-        newGetTypeData={newGetTypeData}
       />
       {entryData.type_1 ? (
         <RandomTypeCard
@@ -89,7 +87,6 @@ function RandomPokemonGenerator({
           noDamageTo={noDamageToTwo}
           doubleDamageFrom={doubleDamageFromTwo}
           getMedallion={getMedallion}
-          newGetTypeData={newGetTypeData}
         />
       ) : (
         ""
