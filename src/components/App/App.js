@@ -117,8 +117,12 @@ function App() {
     getTypeData(randomNumber);
   }
 
-  function searchForPokemon(searchTerm) {}
-  //
+  function searchForPokemon(searchTerm) {
+    const result = mockServer.filter((pokemon) =>
+      pokemon.name.toUpperCase().includes(searchTerm.toUpperCase())
+    );
+  }
+
   useEffect(() => {
     getData();
   }, []);
@@ -127,7 +131,10 @@ function App() {
     <div className='App'>
       <Header />
       <Routes>
-        <Route path='/main' element={<Main />} />
+        <Route
+          path='/main'
+          element={<Main searchForPokemon={searchForPokemon} />}
+        />
         <Route
           path='/random'
           element={
